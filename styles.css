@@ -1,0 +1,85 @@
+/* Define primary colors */
+:root {
+    --primary-dark-blue: #1a1a2e;
+    --primary-grey: #ffbf00;
+    --secondary-grey: #ffea02;
+    --primary-white: #ef1b1b;
+}
+
+body {
+    padding-top: 56px;
+    background-color: var(--primary-white);
+    color: var(--primary-dark-blue);
+}
+
+.navbar {
+    background-color: var(--primary-dark-blue);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--primary-white) !important;
+}
+
+.jumbotron {
+    background-color: var(--primary-grey);
+    padding: 2rem 1rem;
+    color: var(--primary-white);
+}
+
+.btn-primary {
+    background-color: var(--primary-dark-blue);
+    border-color: var(--primary-dark-blue);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-dark-blue), 10%);
+    border-color: darken(var(--primary-dark-blue), 10%);
+}
+
+#pokemon-result img, #pokemon-details img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+/* Center and animate the image */
+.animated-image {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 0 10px;
+}
+
+.spin {
+    animation: spin 4s linear infinite;
+}
+
+.grow {
+    animation: grow 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Flexbox container for images */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+    padding: 20px 0;
+}
